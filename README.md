@@ -47,7 +47,7 @@ The file labeled "IndustryByState.csv" contains information pertaining to the in
 
 This information is a quarterly report of each industry's income based on every state. Each row represents some economic data being represented within a particular state and contains four columns describing the state FIPS (GeoFips), the state name (GeoName), the code given by the BEA to represent each variable (LineCode), and the Description for the LineCode. The first series of columns are labeled by Year:Quarter (ex. 2018:Q1) and represent the currency value. The second series of columns are labeled by \[Year\]\[Quarter\]Change and represent the difference in the last quarter compared to the current quarter.
 
-Data source by [Bureau of Economic Analysis: US Department of Commerce](https://www.bea.gov/data/employment/employment-by-state "Title").
+Data source by [Bureau of Economic Analysis: US Department of Commerce](https://www.bea.gov/data/employment/employment-by-state "BEA").
 
 
 ## National Industry Income
@@ -56,14 +56,14 @@ The file labeled "IndustryByUS.csv" contains information pertaining to the incom
 
 This information is a quarterly report of each industry's income based on the national summary. Each row represents some economic data being represented at the national level and contains four columns describing: 1) the FIPS (GeoFips), 2) the United States (GeoName), 3) the code given by the BEA to represent each variable (LineCode), and 4) the Description for the LineCode. *Note that the first two will remain the same values, as this dataset summarizes information at the national level.* The first series of columns are labeled by Year:Quarter (ex. 2018:Q1) and represent the currency value. The second series of columns are labeled by \[Year\]\[Quarter\]Change and represent the difference in the last quarter compared to the current quarter.
 
-Data source by [Bureau of Economic Analysis: US Department of Commerce](https://www.bea.gov/data/employment/employment-by-state "Title").
+Data source by [Bureau of Economic Analysis: US Department of Commerce](https://www.bea.gov/data/employment/employment-by-state "BEA").
 
 
 ## Unemployment Rates By County 
 
 The file labeled "UnemploymentByCounty.csv" contains information pertaining to
  
-Data source by [BLS.GOV](https://www.bls.gov/web/metro/laucntycur14.txt "Employment by County").
+Data source by [US Bureau of Labor Statistics](https://www.bls.gov/web/metro/laucntycur14.txt "Employment by County").
 
 
 ## Labor Force By County 
@@ -76,5 +76,5 @@ This information has the breakdown of individuals that are eligible to work with
 
 In order to get the count of unemployed individuals, take the unemployed rate by county (represented as a percentage), and multiply by the labor force that month.
 
-Data source by [BLS.GOV](https://www.bls.gov/web/metro/laucntycur14.txt "Employment by County").
+Data source by [US Bureau of Labor Statistics](https://www.bls.gov/web/metro/laucntycur14.txt "Employment by County").
 
