@@ -3,8 +3,9 @@ This repository contains current economic data, COVID-19 metrics, and a python s
 
 The data used in our visualization are contained in the following files:
 
-* COVIDByCountySize.csv
+* COVIDByCountyPerMonth.csv
 * countyPopSize.csv
+* COVIDByCountySize.csv
 * IndustryByState.csv
 * IndustryByUS.csv
 * LaborForceByCounty.csv
@@ -61,7 +62,9 @@ Data source by [Bureau of Economic Analysis: US Department of Commerce](https://
 
 ## Unemployment Rates By County 
 
-The file labeled "UnemploymentByCounty.csv" contains information pertaining to
+The file labeled "UnemploymentByCounty.csv" contains information pertaining to unemployment rates in each county.
+
+This information has the breakdown of the rate of unemployment in each county over the course of several months, starting in January. Each row represents a county and contains four columns describing the county name, the county FIPS, the state each county is located in, and the corresponding state FIPS. Every other column is labeled with a month name corresponding to the percentage of unemployed individuals based on the Civilian Labor Force in the county. 
  
 Data source by [US Bureau of Labor Statistics](https://www.bls.gov/web/metro/laucntycur14.txt "Employment by County").
 
