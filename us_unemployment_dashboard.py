@@ -9,6 +9,8 @@ from bokeh.models.widgets import Panel, Tabs
 import pandas as pd
 import numpy as np
 
+# https://realpython.com/python-data-visualization-bokeh/
+
 output_file('us_unemployment_dashboard.html')
 
 us_states_df = pd.DataFrame(us_states).T
@@ -76,47 +78,17 @@ data['unemployment_rate'] = data[months[f-1]]
 source.change.emit()
 """)
 
-slider = Slider(title = 'Month',start = 1, end = 10, step = 1, value = 1, width = 500)
+
+slider = Slider(title = 'Month', start = 1, end = 10, step = 1, value = 1, width = 500)
 slider.js_on_change('value', callback)
-#month_list = ['January', 'February', 'March', 'April', 'May', 'June']
 #month_select = Select(title='Select Month',value='March',options=month_list)
 #month_select = pnw.Select(name='dataset',options=month_list)
 #month_select.js_on_change('value', callback)
 #month_select.param.watch(update_plot,'value')
 
-us_monthly_unemployment = pd.read_csv('monthly_unemployment_rate_us_2020.csv')
-print(us_monthly_unemployment.head())
 
-bar_chart1 = figure(x_range=us_monthly_unemployment['Month'], plot_height=500,
-                title = 'Monthly Unemployment in US 2020',
-                tooltips=[('Rate', '@Rate')])
-bar_chart1.vbar(x = 'Month',
-            top = 'Rate',
-            source = us_monthly_unemployment,
-            fill_color = 'tomato', line_color='tomato', alpha=0.9, width=0.5)
-bar_chart1.xaxis.axis_label = 'Month'
-bar_chart1.yaxis.axis_label = 'Monthly Unemployment Rate'
-tab1 = Panel(child=bar_chart1, title='Total Unemployment')
-
-bar_chart2 = figure(x_range=us_monthly_unemployment['Month'], plot_height=500,
-                title = 'Monthly Unemployment in US 2020')
-bar_chart2.vbar(x=dodge('Month', -0.25, range=bar_chart2.x_range), top='Men_rate', width=0.2, source=us_monthly_unemployment,
-       color="#718dbf", legend_label="Men")
-bar_chart2.vbar(x=dodge('Month', 0.0, range=bar_chart2.x_range), top='Women_rate', width=0.2, source=us_monthly_unemployment,
-       color="#e84d60", legend_label="Women")
-bar_chart2.xaxis.axis_label = 'Month'
-bar_chart2.yaxis.axis_label = 'Monthly Unemployment Rate'
-bar_chart2.x_range.range_padding = 0.1
-bar_chart2.xgrid.grid_line_color = None
-bar_chart2.legend.location = "top_left"
-bar_chart2.legend.orientation = "horizontal"
-tab2 = Panel(child=bar_chart2, title='Unemployment by Gender')
-
-tabs = Tabs(tabs=[ tab1, tab2 ])
-#show(bar_chart)
-
-
-#layout = column(month_select, fig)
-layout = column(slider, row(fig, tabs))
-#show(fig)
+# Puts slider and map figure in same frame
+layout = column(slider, row(fig))
+# Displays figure in HTML page
 show(layout)
+
