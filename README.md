@@ -81,3 +81,13 @@ In order to get the count of unemployed individuals, take the unemployed rate by
 
 Data source by [US Bureau of Labor Statistics](https://www.bls.gov/web/metro/laucntycur14.txt "Employment by County").
 
+# Running the code
+
+Required python library: bokeh
+Reuired data files:
+-unemployment_by_state_2020.csv
+-VulnerabilityIndexByStateUPDATED.csv
+-monthly_unemployment_rate_us_2020.csv
+-covid_by_state_2020.csv
+-IndustryByUS.csv
+
