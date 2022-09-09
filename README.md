@@ -1,5 +1,5 @@
 # Economic Repurcussions of the COVID-19 Pandemic
-This repository contains current economic data, COVID-19 metrics, and a python source file for data visualization. 
+This repository contains current economic data, COVID-19 metrics, and a python source file for data visualization. The data is reflecting the unemployment situation captured from the year 2020 in US. The visualization dashboard has been built using Python Bokeh library and it can be viewed from this link: https://madhobi.github.io/covid19_unemployment_dashboard/
 
 The data used in our visualization are contained in the following files:
 
